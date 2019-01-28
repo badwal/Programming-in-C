@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+class College
+{
+   public:
+    void set_CollegeData(string cn, string cc, int ts, string bs)
+    {
+       _cName = cn;
+       _cCountry = cc;
+       _cTotalNoStudents = ts;
+       _cBranchs = bs;
+    }
+  
+    void display_CollegeData()
+    {
+       cout<<"College Information"<<endl;
+       cout<<"College Name:"<<_cName<<endl;
+       cout<<"Country:"<<_cCountry<<endl;
+       cout<<"No Of Students:"<<_cTotalNoStudents<<endl;
+       cout<<"Branches Supported: "<<_cBranchs<<endl;
+    }
+  
+  protected:
+    string _cName;
+    string _cCountry;
+    int _cTotalNoStudents;
+    string _cBranchs;
+};
+
+class Student:public College
+{
+   public:
+     void set_StudentData(string fn, string ln, string br, int sem)
+     {
+  	 _cFirstName = fn;
+  	 _cLastName = ln;
+  	 _cBranch = br;
+  	 _cSemister = sem;
+     }
+	  
+     void display_StudentData()
+     {
+  	 cout<<"Student Information"<<endl;
+  	 cout<<"First Name:"<<_cFirstName<<endl;
+  	 cout<<"Last Name:"<<_cLastName<<endl;
+  	 cout<<"Branch:"<<_cBranch<<endl;
+  	 cout<<"Semister: "<<_cSemister<<endl;
+     }
+   protected:
+    string _cFirstName;
+    string _cLastName;
+    string _cBranch;
+    int _cSemister;
+};
+
+int main(int argc, char** argv) 
+{
+    Student student;
+    student.set_CollegeData("MICHIGAN UNIVERSITY", "USA", 120, "CS/EE/ECE/MECH");
+    student.set_StudentData("MARK", "CHUCK", "CS", 4);
+    student.display_StudentData();
+    student.display_CollegeData();
+    return 0;
+}
