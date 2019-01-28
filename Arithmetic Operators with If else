@@ -1,0 +1,43 @@
+#include <stdio.h>
+#define N1 10
+#define N2 20
+
+#define SUM(num1, num2)   ((num1)+(num2))
+#define DIFF(num1, num2)   ((num1)-(num2))
+#define PROD(num1, num2)   ((num1)*(num2))
+#define MOD(num1, num2)   ((num1)%(num2))
+#define DIV(num1, num2)   (((float)num1)/(num2))
+#define AND(num1, num2)   ((num1) & (num2))
+#define OR(num1, num2)   ((num1) | (num2))
+#define XOR(num1, num2)   ((num1) ^ (num2))
+
+#define CALC_TYPE 1
+
+int main(void) 
+{
+   int num1=N1;
+   int num2=N2;
+ 
+   #if CALC_TYPE == 1
+      printf("****BASIC CALCULATOR******\n");
+      printf("sum:%d\n", SUM(num1, num2));
+      printf("diff:%d\n", DIFF(num1, num2));
+      printf("prod:%d\n", PROD(num1, num2));
+      printf("mod:%d\n", MOD(num1, num2));
+      printf("div:%f\n", DIV(num1, num2));
+   #elif CALC_TYPE == 2
+      printf("****ADVANCED CALCULATOR******\n");
+      printf("sum:%d\n", SUM(num1, num2));
+      printf("diff:%d\n", DIFF(num1, num2));
+      printf("prod:%d\n", PROD(num1, num2));
+      printf("mod:%d\n", MOD(num1, num2));
+      printf("div:%f\n", DIV(num1, num2));
+      printf("and: %d\n", AND(num1, num2));
+      printf("or: %d\n", OR(num1, num2));
+      printf("xor: %d\n", XOR(num1, num2));
+   #else
+      printf("*****LOGICAL CALCULATOR*****"\n);
+   #endif
+ 
+   return 0;
+}
