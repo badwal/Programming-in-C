@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class LinkedIn
+{
+public:
+  string FirstName;
+  string LastName;
+  string EmailId;
+  int ExpInYears;
+  float SalInRs;
+	
+  void setMethod(string fn, string ln, string em, int years, float sal)
+  {
+     FirstName = fn;
+     LastName = ln;
+     EmailId = em;
+     ExpInYears = years;
+     SalInRs = sal;
+  }
+	
+  void display()
+  {
+    cout<<"Linked In Profile:"<<endl;
+    cout<<"First Name: "<<FirstName<<endl;
+    cout<<"Last Name: "<<LastName<<endl;
+    cout<<"Email Id: "<<EmailId<<endl;
+    cout<<"Exp In Years: "<<ExpInYears<<endl;
+    cout<<"Sal In Rs: "<<SalInRs;
+ }
+};
+
+int main(int argc, char** argv) 
+{
+    LinkedIn profile1[2];
+    profile1[0].setMethod("JET", "LEE", "jet.lee@yahoo.com", 35, 423423.45f);
+    profile1[0].display();
+    cout<<endl;
+    profile1[1].setMethod("CHUCK", "NORRIS", "chuck.norris@yahoo.com", 34, 423432.45f);
+    profile1[1].display();
+    return 0;
+}
